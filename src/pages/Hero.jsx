@@ -189,7 +189,7 @@ export default function Hero() {
               transition={{ delay: 0.4 }}
               className="text-gray-500 font-light italic text-base sm:text-lg"
             >
-              Nos Casaremos
+              Nos Casamos!
             </motion.p>
             <motion.h2
               initial={{ scale: 0.8, opacity: 0 }}

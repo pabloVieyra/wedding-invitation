@@ -44,7 +44,7 @@ export default function Gifts() {
               transition={{ delay: 0.3 }}
               className="text-4xl md:text-5xl font-serif text-gray-800"
             >
-              Da un Regalo
+              Regalos
             </motion.h2>
 
             {/* Divisor decorativo */}
@@ -67,8 +67,9 @@ export default function Gifts() {
               className="space-y-4 max-w-md mx-auto"
             >
               <p className="text-gray-600 leading-relaxed">
-                Estamos muy agradecidos por tu generosidad. Estos regalos nos
-                ayudarán a disfrutar de esta nueva etapa juntos.
+                Tu presencia es el mejor regalo que podemos recibir.
+Pero si deseas hacernos un obsequio, que sea con cariño y sin compromiso.
+Queremos que todo sea desde el corazón, sin presiones ni complicaciones ❤️
               </p>
             </motion.div>
 

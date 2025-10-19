@@ -25,8 +25,6 @@ A modern, interactive wedding invitation website built with Vite (React), Tailwi
 1. Clone the repository and install dependencies:
 
 ```bash
-git clone https://github.com/mrofisr/islamic-wedding-invitation
-cd islamic-wedding-invitation
 bun install
 ```
 

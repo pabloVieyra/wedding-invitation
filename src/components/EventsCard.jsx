@@ -12,6 +12,7 @@ import {
   Calendar as CalendarIcon,
 } from "lucide-react";
 import { formatEventDate } from "@/lib/formatEventDate";
+import Dresscode from "./Dresscode";
 
 const Modal = ({ isOpen, onClose, children }) => {
   return (
@@ -227,6 +228,7 @@ const EventCards = ({ events }) => {
       {events.map((event, index) => (
         <SingleEventCard key={index} eventData={event} />
       ))}
+      <Dresscode />
     </div>
   );
 };

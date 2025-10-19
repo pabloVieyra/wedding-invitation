@@ -40,7 +40,7 @@ export default function Events() {
               transition={{ delay: 0.3 }}
               className="text-4xl md:text-5xl font-serif text-gray-800 leading-tight"
             >
-              Serie de Eventos de la Boda
+               Evento
             </motion.h2>
 
             <motion.p
@@ -50,8 +50,7 @@ export default function Events() {
               transition={{ delay: 0.4 }}
               className="text-gray-500 max-w-md mx-auto"
             >
-              Te invitamos a celebrar este día especial como el comienzo de
-              nuestro viaje de amor
+              Te invitamos a celebrar este día especial
             </motion.p>
 
             {/* Decorative Line */}
