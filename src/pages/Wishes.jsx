@@ -94,7 +94,7 @@ export default function Wishes() {
       });
       await res.text();
       setShowConfetti(true);
-      setTimeout(() => setShowConfetti(false), 3000);
+      setTimeout(() => setShowConfetti(false), 4000);
       setNewWish("");
       setAttendance("");
       setCompanions(maxCompanions > 0 ? [""] : []);
@@ -111,7 +111,7 @@ export default function Wishes() {
   return (
     <>
       <section id="wishes" className="min-h-screen relative overflow-hidden">
-        {showConfetti && <Confetti recycle={false} numberOfPieces={200} />}
+        {showConfetti && <Confetti recycle={false} numberOfPieces={800} />}
         <div className="container mx-auto px-4 py-20 relative z-10">
           {/* Section Header */}
           <motion.div
