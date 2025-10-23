@@ -183,14 +183,7 @@ export default function Hero() {
           </motion.div>
 
           <div className="space-y-4">
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.4 }}
-              className="text-gray-500 font-light italic text-base sm:text-lg"
-            >
-              Nos Casamos!
-            </motion.p>
+
             <motion.h2
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}

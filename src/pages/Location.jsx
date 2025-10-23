@@ -91,21 +91,10 @@ export default function Location() {
                     <MapPin className="w-5 h-5 text-gold-500 mt-1" />
                     <p className="text-gray-600 flex-1">
                       {config.data.address}
+                      <br />
+                      Catamarca 3185, Claypole
                     </p>
                   </div>
-
-                  <div className="flex items-center space-x-4">
-                    <CalendarCheck className="w-5 h-5 text-gold-500" />
-                    <p className="text-gray-600">
-                      {formatEventDate(config.data.date)}
-                    </p>
-                  </div>
-
-                  <div className="flex items-center space-x-4">
-                    <Clock className="w-5 h-5 text-gold-500" />
-                    <p className="text-gray-600">{config.data.time}</p>
-                  </div>
-
                   {/* Action Button - Full Width */}
                   <div className="pt-4">
                     <motion.a

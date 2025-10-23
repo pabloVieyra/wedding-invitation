@@ -41,24 +41,14 @@ const LandingPage = ({ onOpenInvitation }) => (
             <div className="h-px w-12 sm:w-16 bg-gold-200/50" />
           </div>
 
-          {/* Date and Time */}
+          {/* ¡Nos Casamos! */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
-            className="flex flex-col gap-4 mb-6 sm:mb-8 items-center"
+            className="mb-6 sm:mb-8 text-center"
           >
-            <div className="inline-flex flex-col items-center space-y-1 bg-white/80 px-4 sm:px-6 py-2 sm:py-3 rounded-xl">
-              <Calendar className="w-5 h-5 text-gold-400" />
-              <p className="text-gray-700 font-medium">
-                {formatEventDate(config.data.date)}
-              </p>
-            </div>
-
-            <div className="inline-flex flex-col items-center space-y-1 bg-white/80 px-4 sm:px-6 py-2 sm:py-3 rounded-xl">
-              <Clock className="w-5 h-5 text-gold-400" />
-              <p className="text-gray-700 font-medium">{config.data.time}</p>
-            </div>
+            <span className="block text-lg sm:text-xl md:text-2xl font-semibold text-gold-500 tracking-wide">¡Nos Casamos!</span>
           </motion.div>
 
           {/* Couple Names */}
@@ -71,7 +61,7 @@ const LandingPage = ({ onOpenInvitation }) => (
             <div className="space-y-2">
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif text-gray-800 leading-tight">
                 {config.data.groomName}
-                <span className="text-gold-400 mx-2 sm:mx-3">&</span>
+                <span className="text-gold-500 mx-2 sm:mx-3">&</span>
                 {config.data.brideName}
               </h1>
               <div className="h-px w-16 sm:w-24 mx-auto bg-gold-200" />
