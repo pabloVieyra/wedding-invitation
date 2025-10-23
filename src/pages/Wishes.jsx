@@ -20,8 +20,11 @@ export default function Wishes() {
   const [maxCompanions, setMaxCompanions] = useState(0);
   const [guestName, setGuestName] = useState("");
   const [alreadySent, setAlreadySent] = useState(false);
+  const [expired, setExpired] = useState(false);
 
   useEffect(() => {
+    // Fecha máxima para enviar (20 de noviembre, 23:59 hora Argentina)
+    const MAX_DATE = new Date("2025-11-20T23:59:59-03:00");
     const urlParams = new URLSearchParams(window.location.search);
     const companionsParam = urlParams.get("companions");
     let max = 0;
@@ -40,6 +43,10 @@ export default function Wishes() {
     // Verifica en localStorage si ya envió
     const sent = localStorage.getItem("weddingWishSent");
     if (sent === "true") setAlreadySent(true);
+
+    // Verifica si ya pasó la fecha límite
+    const now = new Date();
+    if (now > MAX_DATE) setExpired(true);
   }, []);
 
   const options = [
@@ -64,6 +71,7 @@ export default function Wishes() {
 
   const handleSubmitWish = async (e) => {
     e.preventDefault();
+    if (expired) return;
     if (!attendance || !e.target.name.value.trim()) return;
     setIsSubmitting(true);
     const sheetUrl = import.meta.env.VITE_SHEET_URL;
@@ -135,7 +143,7 @@ export default function Wishes() {
               transition={{ delay: 0.3 }}
               className="text-4xl md:text-5xl font-serif text-gray-800"
             >
-              Mensajes
+              Confirmacion
             </motion.h2>
 
             {/* Decorative Divider */}
@@ -156,7 +164,12 @@ export default function Wishes() {
             transition={{ delay: 0.5 }}
             className="max-w-2xl mx-auto mt-12"
           >
-            {alreadySent ? (
+            {expired ? (
+              <div className="bg-white/80 p-8 rounded-2xl border border-gold-100/50 shadow-lg text-center">
+                <h3 className="text-2xl font-semibold text-gold-700 mb-4">El plazo para confirmar asistencia ha finalizado</h3>
+                <p className="text-gray-600">La fecha máxima para confirmar era el 20 de noviembre. Si necesitas comunicarte, por favor contacta a los novios.</p>
+              </div>
+            ) : alreadySent ? (
               <div className="bg-white/80 p-8 rounded-2xl border border-gold-100/50 shadow-lg text-center">
                 <h3 className="text-2xl font-semibold text-gold-700 mb-4">¡Gracias por confirmar y enviar tus deseos!</h3>
                 <p className="text-gray-600">Ya has enviado tu confirmación. Si necesitas modificarla, contacta a los novios.</p>
