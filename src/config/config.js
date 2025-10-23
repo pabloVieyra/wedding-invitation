@@ -54,7 +54,7 @@ const config = {
     banks: [
       {
         bank: "Naranja X",
-        accountNumber: "agusydani",
+        accountNumber: "PACHECOYAGUIRRE",
         accountName: "Agustin Eugenio Pacheco",
       },
     ],
