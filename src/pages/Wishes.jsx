@@ -24,7 +24,7 @@ export default function Wishes() {
 
   useEffect(() => {
     // Fecha máxima para enviar (20 de noviembre, 23:59 hora Argentina)
-    const MAX_DATE = new Date("2025-11-20T23:59:59-03:00");
+    const MAX_DATE = new Date("2025-11-29T23:59:59-03:00");
     const urlParams = new URLSearchParams(window.location.search);
     const companionsParam = urlParams.get("companions");
     let max = 0;
